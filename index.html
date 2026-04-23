@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>J Worthen | Bioinformatics</title>
   <style>
     body {
@@ -9,94 +10,136 @@
       margin: 0;
       background: #fafafa;
       color: #222;
+      line-height: 1.6;
     }
 
     nav {
       display: flex;
       justify-content: space-between;
-      padding: 15px 40px;
+      align-items: center;
+      padding: 18px 40px;
       background: #111;
       color: white;
+    }
+
+    nav h2 {
+      margin: 0;
+      font-size: 24px;
     }
 
     nav a {
       color: white;
       margin-left: 20px;
       text-decoration: none;
+      font-size: 16px;
     }
 
     .container {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 0 24px;
     }
 
     h1 {
-      font-size: 34px;
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 40px;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    h4 {
+      margin-bottom: 8px;
+      font-size: 20px;
     }
 
     .subtitle {
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
+      font-size: 18px;
+    }
+
+    .project {
+      margin-bottom: 28px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
   </style>
 </head>
 
 <body>
 
-<nav>
-  <h2>J Worthen</h2>
-  <div>
-    <a href="#">About</a>
+  <nav>
+    <h2>J Worthen</h2>
+    <div>
+      <a href="#">About</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Bioinformatics &amp; Genomics</h1>
+
+    <p class="subtitle">
+      Transcript-level gene regulation | Circadian biology | Alternative splicing
+    </p>
+
+    <p>
+      I am a bioinformatician and molecular biologist studying transcript-level gene regulation.
+      My work focuses on circadian biology, alternative splicing, and isoform dynamics, using RNA-seq,
+      computational genomics, and integrative analysis to uncover regulatory mechanisms that are not
+      visible at the gene level.
+    </p>
+
+    <h3>Selected Projects</h3>
+
+    <div class="project">
+      <h4>Transcript-Level Circadian RNA-seq Analysis</h4>
+      <p>
+        Developed a transcript-resolved circadian RNA-seq workflow in adipocytes using SortMeRNA,
+        STAR, and RSEM, followed by LIMBR batch correction of TPM values. Transcripts were filtered
+        to average CPM &gt; 10 and restricted to protein-coding isoforms from protein-coding genes to
+        identify rhythmic transcripts with ECHO.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Circadian TF Motif Enrichment in Rhythmic ATAC-seq Peaks</h4>
+      <p>
+        Integrated rhythmic chromatin accessibility data with transcription factor motif analysis to
+        predict circadian TF binding near rhythmic ATAC-seq peaks. motifmatchr was used to identify
+        enriched motifs in rhythmic adipocyte chromatin and nominate candidate regulators of circadian
+        transcriptional programs.
+      </p>
+    </div>
+
+    <div class="project">
+      <h4>Rhythmic Alternative Splicing and Isoform Regulation</h4>
+      <p>
+        Extended transcript-level circadian analysis to alternative splicing and isoform usage to define
+        how temporal regulation shapes RNA processing. This work focuses on identifying rhythmic splicing
+        events, isoform-specific dynamics, and downstream regulatory mechanisms involving RNA-binding
+        proteins.
+      </p>
+    </div>
+
+    <h3>Current Work</h3>
+    <ul>
+      <li>Transcript-level circadian RNA-seq analysis using SortMeRNA, STAR, RSEM, LIMBR, and ECHO</li>
+      <li>Motif enrichment analysis of circadian transcription factors in rhythmic ATAC-seq peaks</li>
+      <li>Extension to rhythmic splicing and RNA-binding protein regulation</li>
+    </ul>
   </div>
-</nav>
-
-<div class="container">
-  <h1>Bioinformatics & Genomics</h1>
-
-  <p class="subtitle">
-    Transcript-level gene regulation | Circadian biology | Alternative splicing
-  </p>
-
-  <p>
-    I am a bioinformatician and molecular biologist studying transcript-level gene regulation.
-    My work focuses on circadian biology, alternative splicing, and isoform dynamics,
-    using RNA-seq and computational approaches to uncover regulatory mechanisms not visible at the gene level.
-  </p>
-
-  <h3>Current Work</h3>
-  <h3>Selected Projects</h3>
-
-<div>
-  <h4>Circadian Transcriptome Analysis</h4>
-  <p>
-    Identified ~7,500 rhythmic transcripts and demonstrated divergence between gene-level
-    and isoform-level regulation.
-  </p>
-</div>
-
-<div>
-  <h4>Rhythmic Alternative Splicing</h4>
-  <p>
-    Characterized ~3,500 rhythmic splicing events and their temporal structure using ΔPSI.
-  </p>
-</div>
-
-<div>
-  <h4>RBP Motif Enrichment</h4>
-  <p>
-    Built a pipeline to detect circadian enrichment of RNA-binding protein motifs near splice sites.
-  </p>
-</div>
-
-
-<ul>
-  <li>Transcript vs gene-level circadian regulation</li>
-  <li>Rhythmic alternative splicing (~3,500 events)</li>
-  <li>RBP motif enrichment across circadian time</li>
-</ul>
-
-</div>
 
 </body>
 </html>
